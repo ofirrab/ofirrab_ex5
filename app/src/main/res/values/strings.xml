@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Honey I am Home</string>
+    <string name="setAsHome" />
+    <string name="clear" />
+    <string name="Start" />
+    <string name="set_as_home_location">Set as Home Location</string>
+</resources>

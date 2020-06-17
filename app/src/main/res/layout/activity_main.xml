@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AED6F1"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/StartTracking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BFC9CA"
+        android:layout_marginTop="20dp"
+        android:text="Start Tracking"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IsHome"
+        app:layout_constraintBottom_toTopOf="@id/HomeLocationText"
+        />
+
+    <Button
+        android:id="@+id/ClearHomeLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear Home"
+        android:background="#BFC9CA"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/SetAsHome"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/SetAsHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_as_home_location"
+        android:background="#BFC9CA"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/ClearHomeLocation"
+        app:layout_constraintTop_toBottomOf="@id/HomeLocationLatitude"
+ />
+
+    <TextView
+        android:id="@+id/CurrentLocationLongitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/CurrentLocationLatitude"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        tools:ignore="SmallSp" />
+    <TextView
+        android:id="@+id/CurrentLocationLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/Accuracy"
+        app:layout_constraintTop_toBottomOf="@id/CurrentLocationLongitude"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/Accuracy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/CurrentLocationLatitude"
+        app:layout_constraintBottom_toTopOf="@id/IsHome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/IsHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Accuracy"
+        app:layout_constraintBottom_toTopOf="@id/StartTracking"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/HomeLocationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/StartTracking"
+        app:layout_constraintBottom_toTopOf="@id/HomeLocationLongitude"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/HomeLocationLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/HomeLocationText"
+        app:layout_constraintBottom_toTopOf="@id/HomeLocationLatitude"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/HomeLocationLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/HomeLocationLongitude"
+        app:layout_constraintBottom_toTopOf="@id/SetAsHome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#34495E"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
